@@ -239,7 +239,7 @@
     }
     .item-slide{
         max-width: 360px !important;
-        max-height: 280px !important; 
+        /* max-height: 280px !important;  */
         margin-left: 10px !important;
         margin-right: 10px !important;
     }
