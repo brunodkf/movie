@@ -113,7 +113,7 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
             //    console.log(listaBackSerie);
                const randomElement = listaBackSerie[Math.floor(Math.random() * listaBackSerie.length)];
             //    console.log(randomElement)
-               principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
+               principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
                principal.style.backgroundSize = 'cover';
         }).catch((element)=>{ //FILMES
             // console.log(element);
@@ -127,7 +127,7 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
             // console.log(listaBackFilme);
             const randomElement = listaBackFilme[Math.floor(Math.random() * listaBackFilme.length)];
             // console.log(randomElement)
-            principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
+            principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
             principal.style.backgroundSize = 'cover';
         });
 
