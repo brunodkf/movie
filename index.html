@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>This Movie - Seu Filme Aqui!</title>
+	<link rel="stylesheet" type="text/css" href="./modules/slick/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="./modules/slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="sortcut icon" href="https://img.icons8.com/nolan/50/movie.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/base/normalize.css">
+	<link rel="stylesheet" href="./css/base/reset.css"> 
+	<link rel="stylesheet" href="./css/Header.css">
+	<link rel="stylesheet" href="./css/Divisor.css">
+	<link rel="stylesheet" href="./css/Carrousel.css">
+	<link rel="stylesheet" href="./css/Destaque.css">
+	<link rel="stylesheet" href="./css/Footer.css">
+</head>
+
+<body>
+	<header>
+		<div class="cabecalho container">
+			<div class="menu-box">
+				<a href="index.html"><img class="cabecalho-img" src="./css/image/ThisLogo.png" alt="ThisLogo"></a>
+				
+
+				<div class="menu">
+					<nav class="container-menu-cabecalho">
+						<ul class="menu-cabecalho">
+							<li class="item-menu"><a href="#">Filmes</a></li>
+							<li class="item-menu"><a href="#">Séries</a></li>
+							<li class="item-menu"><a href="#">Animes</a></li>
+							<li class="item-menu"><a href="#">Contato</a></li>
+						</ul>
+					</nav>
+	
+					<div class="minha-conta-mobile" data-minha-conta>
+						<img class="minha-conta-img" style="width: 25px;" src="./css/image/user2.png" alt="user">
+						<p>MINHA CONTA</p>
+					</div>
+				</div>
+				
+				<div class="minha-conta" data-minha-conta>
+					<img class="minha-conta-img" style="width: 25px;" src="./css/image/user2.png" alt="user">
+					<p>MINHA CONTA</p>
+				</div>
+
+				<div class="hamburguer-container" id="btn-mobile">
+					<input type="checkbox" id="checkbox-menu" data-button-menu>
+					<label for="checkbox-menu">
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+
+	<section class="destaque" ></section>
+
+	<section class="divisor">
+		<div class="container-divisor">
+			<figure class="figure">
+				<img class="rocket"  src="./css/image/icons/rocket.png" alt="Icone Lançamentos">
+				<figcaption>Lançamentos</figcaption>
+			</figure>
+			<figure class="figure">
+				<img class="box" src="./css/image/icons/box.png" alt="Icone Novos Filmes">
+				<figcaption>Novos Filmes</figcaption>
+			</figure>
+			<figure class="figure">
+				<img class="fire" src="./css/image/icons/fire.png" alt="Icone Populares">
+				<figcaption>Populares</figcaption>
+			</figure>
+			<figure class="figure">
+				<img class="glasses" src="./css/image/icons/glasses.png" alt="Icone Mais Assistidos">
+				<figcaption>Mais Assistidos</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<section class="carrousel">
+		<div class="container-carrousel">
+			<div class="container-slide-filmes">
+				<div class="nav-slide">
+					<div class="nav-slide-container">
+						<h2>Os Melhores Filmes</h2>
+						<div class="nav-slide-container-botoes">
+							<button>Lançamentos</button>
+							<button>Populares</button>
+							 <button>Outros</button>  
+						</div>
+					</div>
+				</div>
+				<button type='button' class="arrow prevFilme"><img width="30" style="transform: rotate(180deg);" src="./css/image/icons/arrowSlide.png" alt="Seta de Anterior"></button>
+				<button type='button' class="arrow nextFilme"><img width="30" src="./css/image/icons/arrowSlide.png" alt="Seta de Próximo"></button>
+				<div class="slide-filmes"></div>
+			</div>
+			<div class="respiro" style="margin: 40px 0px 40px 0px; text-align: center;">
+				<img width="30" src="./css/image/icons/save.png" alt="Icone de Favoritos">
+				<h1 style="font-size: 22px; margin-bottom: 20px; margin-top: 10px;">Faça login para acessar sua Lista para assistir</h1>
+				<p style="letter-spacing: 2.5px;">Salve suas séries e filmes para acompanhar o que pretende assistir.</p>
+				<span></span>
+			</div>
+			<div class="container-slide-series">
+				<div class="nav-slide">
+					<div class="nav-slide-container">
+						<h2>Assista suas Séries Aqui!</h2>
+						<div class="nav-slide-container-botoes">
+							<button>Lançamentos</button>
+							<button>Populares</button>
+							 <button>Outros</button>  
+						</div>
+					</div>
+				</div>
+				<button type='button' class="arrow prevSerie"><img width="30" style="transform: rotate(180deg);" src="./css/image/icons/arrowSlide.png" alt="Seta de Anterior"></button>
+				<button type='button' class="arrow nextSerie"><img width="30" src="./css/image/icons/arrowSlide.png" alt="Seta de Próximo"></button>
+				<div class="slide-series"></div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="rodape container">
+			<section class="rodape-navMap">
+				<div class="rodape-header">
+					<a href="#" target="_blank"><img class="rodape-image" src="./css/image/ThisLogo.png" alt="Logotipo THIS"></a>
+			
+					<div class="redesSociais">
+						<a target="_blank" href="https://www.instagram.com/brunodkf/" class="circle-icons fa fa-instagram"></a>
+						<a  target="_blank" href="https://twitter.com/brunodkf" class="circle-icons fa fa-twitter"></a>
+						<a target="_blank"  href="https://www.facebook.com/brunodkf/" class="circle-icons fa fa-facebook"></a>
+						<a target="_blank"  href="https://github.com/brunodkf" class="circle-icons fa fa-brands fa-github"></a>
+					</div>
+				</div>
+			
+				<nav class="rodape-navMap-list">
+
+					<ul class="links">
+						<h4 class="titulo-rodape">Empresa</h4>
+						<li><a href="#">Sobre</a></li>
+						<li><a href="#">Empregos</a></li>
+						<li><a href="#">Freelas</a></li>
+					</ul>
+
+
+
+					<ul class="links">
+						<h4 class="titulo-rodape">Comunidades</h4>
+						<li><a href="#">Discord</a></li>
+						<li><a href="#">Desenvolvedores</a></li>
+						<li><a href="#">Publicidade</a></li>
+						<li><a href="#">Investidores</a></li>
+						<li><a href="#">Fornecedores</a></li>
+					</ul>
+
+
+
+					<ul class="links">
+						<h4 class="titulo-rodape">Links úteis</h4>
+						<li><a href="#">Github</a></li>
+						<li><a href="#">IMDB</a></li>
+						<li><a href="#">APP</a></li>
+						<li><a href="#">Top 2022</a></li>
+					</ul>
+				</nav>
+
+				<div class="copyright">
+					<div>
+						<p>Todos os direitos reservados ao desenvolvedor do site</p>
+					</div>
+					<a href="https://www.instagram.com/brunodkf/" target="_blank">&copy;Brunodkf</a>
+				</div>
+			</section>
+		</div>
+	</footer>
+
+	<script src="./index.js" type="module"></script>
+	<script src="./carrousel.js" type="module"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="./modules/slick/slick/slick.min.js"></script>
+
+	<!-- @brunodkf
+     @brunodkf
+     @brunodkf -->
+
+</body>
+</html>

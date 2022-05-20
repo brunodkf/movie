@@ -1,0 +1,106 @@
+@-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  @keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+
+.divisor{
+    position: absolute; 
+    width: 100%;  
+    top: 560px;
+    border: solid 1px #ffffff5b;
+    border-left: 0px;
+    border-right: 0px;
+}
+.container-divisor{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
+  max-width: 1270px;
+  flex-wrap: wrap;
+  padding: 10px 0px 10px 0px ;
+}
+
+.figure{
+    text-align: center;
+    width: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+.figure img{
+    width: 50px;
+}
+.figure figcaption{
+    letter-spacing: 2px;
+    font-weight: 100;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+
+@media screen and (min-width: 501px) {
+    .divisor{
+        top: 530px !important;
+    }
+    .rocket:hover{
+        transition: 4s;
+        cursor: pointer;
+        -webkit-animation: vibrate-1 0.3s linear infinite both;
+        animation: vibrate-1 0.3s linear infinite both;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .divisor{
+        top: 600px;
+    }
+    
+}
