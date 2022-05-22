@@ -1,12 +1,12 @@
 import Tmdb from "./modules/Tmdb.js";
 
 let list = await Tmdb.getHomeList();
-// console.log(list);
+
 
 destaque(list);
 
-
-function destaque(list){ //Funcão acessa posição de array onde está a lista de Recomendados e com ela implementa o Destaque
+//Funcão acessa posição de array onde está a lista de Recomendados e com ela implementa o Destaque
+function destaque(list){ 
 
     //Selecionando a section Destaque
     let principal = document.querySelector('.destaque');
@@ -20,18 +20,19 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
     destaque.classList.add('container-destaque');
     principal.appendChild(destaque);
 
+    //Informações de Subtitulo do Destaque
     let span = document.createElement('span');
     span.classList.add('subtitulo');
     span.innerHTML =  `${movie[i].title || movie[i].name}  já disponível !`;
     destaque.appendChild(span);
 
- 
+     //Informações do Titulo e Logo do Destaque
     let titulo = document.createElement('div');
     titulo.classList.add('titulo');
 
+    //Funcão responsável por identificar o ID do filme gerado aleatóriamente e buscar na API uma Lista de Logos disponíveis para determinado filme ou série.
     async function infoImage(){
         let TipoLista = await Tmdb.getMovieImage(movie[i].id);
-        let listaSeleta = [];
 
         let NewList = new Promise((resolve, reject) =>{   //LOGOTIPO DOS FILMES E SERIES
             const listaDeLogosFilmes =  TipoLista[0].info.logos;
@@ -39,40 +40,38 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
              
             if(movie[i].media_type == "tv"){
                 resolve(listaDeLogosSeries);
-                // console.log('NAO E FILME');
+              
             }else{
-                // console.log('E UM FILME');
+                
                 reject(listaDeLogosFilmes);
             }
         });
 
         NewList.then((element)=>{
-            // console.log(element);
+     
             element.forEach((logo)=>{
                 if(logo.iso_639_1 == "pt" && true){
-                    listaSeleta.push(logo);
+                   
                     titulo.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${logo.file_path}">`;
                     
                 }else if(logo.iso_639_1 == 'en'){
-                    listaSeleta.push(logo);
+               
                     titulo.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${logo.file_path}">`;
                 }
             })
         }).catch((element)=>{
-           // console.log(element);
+      
            let listaLogoFilmePT = [];
            let listaLogoFilmeEN = [];
            element.forEach((background)=>{
                if(background.iso_639_1 == "pt"){
-               //    console.log(background.file_path);
+
                   listaLogoFilmePT.push(background.file_path)
                }else if(background.iso_639_1 == "en"){
                   listaLogoFilmeEN.push(background.file_path)
                }
            });
 
-        //    console.log(listaLogoFilmePT);
-        //    console.log(listaLogoFilmeEN);
 
            if(listaLogoFilmePT.length === 0){
             const randomElement = listaLogoFilmeEN[Math.floor(Math.random() * listaLogoFilmeEN.length)];
@@ -92,41 +91,40 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
             
             if(movie[i].media_type == "tv"){
                 resolve(listaBackSeries);
-                // console.log('É UMA SÉRIE');
-                // console.log(TipoLista[1])
+
             }else{
-                // console.log('E UM FILME');
+    
                 reject(listaBackFilmes);
-                // console.log(TipoLista[0])
+        
             }
         });
 
         BackList.then((element)=>{  //SÉRIES
-               // console.log(element);
+        
                let listaBackSerie = [];
                element.forEach((background)=>{
                    if(background.iso_639_1 === null){
-                    //   console.log(background.file_path);
+            
                       listaBackSerie.push(background.file_path)
                    }
                });
-            //    console.log(listaBackSerie);
+ 
                const randomElement = listaBackSerie[Math.floor(Math.random() * listaBackSerie.length)];
-            //    console.log(randomElement)
+   
                principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
                principal.style.backgroundSize = 'cover';
         }).catch((element)=>{ //FILMES
-            // console.log(element);
+       
             let listaBackFilme = [];
             element.forEach((background)=>{
                 if(background.iso_639_1 === null){
-                //    console.log(background.file_path);
+          
                    listaBackFilme.push(background.file_path)
                 }
             });
-            // console.log(listaBackFilme);
+
             const randomElement = listaBackFilme[Math.floor(Math.random() * listaBackFilme.length)];
-            // console.log(randomElement)
+
             principal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(2, 11, 20, 0.6), rgba(2, 11, 20, 1)), url(https://image.tmdb.org/t/p/original${randomElement})`;
             principal.style.backgroundSize = 'cover';
         });
@@ -138,7 +136,7 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
     titulo.innerHTML = movie[i].title || movie[i].name ;
     destaque.appendChild(titulo);
     
-    //async function:
+ //Funcão responsável por identificar o ID do filme gerado aleatóriamente e buscar na API uma Lista de Informações disponíveis para determinado filme ou série.
     async function infoCatch() {
       let sobre = await Tmdb.getMovieInfo(movie[i].id);
       let busca;
@@ -223,7 +221,7 @@ function destaque(list){ //Funcão acessa posição de array onde está a lista 
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////
 
 //Hamburguer Mobile
 const button = document.querySelector('[data-button-menu]');
