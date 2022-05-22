@@ -85,10 +85,6 @@ Sim!!! O Movie pode ser visitado através do Github Pages
 
 Só clicar e conferir!
 
-<a href="https://www.instagram.com/brunodkf/" target="_blank">&copy;Brunodkf</a>
-
-<a href= "https://brunodkf.github.io/movie/"> 
-  <img src = "./css/image/clica_aqui.gif">
-</a>
+<a href="https://brunodkf.github.io/movie/" target="_blank"> <img src = "./css/image/clica_aqui.gif"> </a>
 
 
