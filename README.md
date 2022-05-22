@@ -87,8 +87,4 @@ Só clicar e conferir!
 
 <a href="https://brunodkf.github.io/movie/" target="_blank"> MOVIE </a>
 
-<a href="https://brunodkf.github.io/movie/" target="_blank"> MOVIE </a>
-
-<a href="https://brunodkf.github.io/movie/" target="_blank"> MOVIE </a>
-
 
