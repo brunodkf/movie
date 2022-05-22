@@ -85,7 +85,7 @@ Sim!!! O Movie pode ser visitado através do Github Pages
 
 Só clicar e conferir!
 
-<a target="_blank" href= "https://brunodkf.github.io/movie/"> 
+<a href= "https://brunodkf.github.io/movie/"> 
   <img src = "./css/image/click.gif">
 </a>
 
