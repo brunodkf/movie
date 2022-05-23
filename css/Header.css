@@ -67,8 +67,7 @@ body{
 
 
     position: absolute;
-    width: 85%;
-    height: calc(100vh - 43vh);
+    width:85%;
     top: 70px;
     left: 0px;
     right: 0px;
@@ -93,12 +92,14 @@ body{
     border-radius: 10px;
     padding: 15px;
     letter-spacing: 3px;
-    margin-top: 15px;
+    margin-top: 25px;
     text-align: center;
     cursor: pointer;
 }
 .item-menu:hover{
-  background-color: #020b14;
+  background-color: #7e7e7e2c;
+  transform: scale(1.1);
+  transition: all ease-in 0.2s;
 }
 .item-menu a{
     text-decoration: none;
@@ -107,7 +108,7 @@ body{
 }
 .minha-conta-mobile{
     width: 150px;
-    background-color: #03407e;
+    background-color: #dd003f8e;
     padding: 10px;
     display:flex;
     justify-content: space-around;
@@ -115,6 +116,11 @@ body{
     margin-top: 30px;
     border-radius: 12px;
     cursor: pointer;
+}
+.minha-conta-mobile:hover{
+  background-color: #dd003f;
+  transform: scale(1.1);
+  transition: all ease-in 0.2s;
 }
 .minha-conta-mobile img{
     margin-right: 5px;
@@ -183,7 +189,6 @@ body{
 @media screen and (min-width: 501px) {
   .menu.active{
     width: 70%;
-    height: calc(100vh - 38vh);
   }
   .item-menu{
     margin-top: 30px;
@@ -213,8 +218,7 @@ body{
   .menu.active{
     display: flex;
     position: initial;
-    width: 440px;
-    height: 50px;  
+    width: 440px; 
     border: none;
     top: 0px;
     background: none;
