@@ -15,8 +15,8 @@ function SectionFilmes(element){
     let Filmes = document.querySelector('.slide-filmes');
 
     element.forEach(element => {
-        console.log(element.title);
-        console.log(element.poster_path);
+//         console.log(element.title);
+//         console.log(element.poster_path);
         let figure = document.createElement('div');
         figure.classList.add('item-slide');
         figure.style = 'width: 270px; height: 360px; border-radius: 20px; margin-left: 10px; margin-right: 10px;'
