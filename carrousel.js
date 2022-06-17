@@ -93,8 +93,8 @@ function SectionSeries(element){
     let Series = document.querySelector('.slide-series');
 
     element.forEach(element => {
-        console.log(element.title || element.name);
-        console.log(element.poster_path);
+//         console.log(element.title || element.name);
+//         console.log(element.poster_path);
         let season = document.createElement('div');
         season.classList.add('item-slide');
         season.style = 'width: 270px; height: 360px; border-radius: 20px; margin-left: 10px; margin-right: 10px;'
