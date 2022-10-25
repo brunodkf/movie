@@ -1,7 +1,7 @@
 import Tmdb from "./modules/Tmdb.js";
 
 let list = await Tmdb.getHomeList();
-console.log(list);
+// console.log(list);
 
 let ListaDeFilmes = list[2].items.results;
 let ListaDeSeries = list[0].items.results;
@@ -15,8 +15,8 @@ function SectionFilmes(element){
     let Filmes = document.querySelector('.slide-filmes');
 
     element.forEach(element => {
-//         console.log(element.title);
-//         console.log(element.poster_path);
+        // console.log(element.title);
+        // console.log(element.poster_path);
         let figure = document.createElement('div');
         figure.classList.add('item-slide');
         figure.style = 'width: 270px; height: 360px; border-radius: 20px; margin-left: 10px; margin-right: 10px;'
@@ -78,7 +78,7 @@ function SectionFilmes(element){
             //Avaliação
             let rating = document.createElement('p');
             rating.style = 'display: flex;  align-items: baseline;';
-            rating.innerHTML = `<img width="15" height="15" style="margin-right: 3px; padding-top: 3px;" src="./css/image/icons/star.png" alt="Icone Estrela"> ${busca.vote_average}`;
+            rating.innerHTML = `<img width="15" height="15" style="margin-right: 3px; padding-top: 3px;" src="./css/image/icons/star.png" alt="Icone Estrela"> ${busca.vote_average.toFixed(1)}`;
             infos.appendChild(rating);
          
         }
@@ -93,8 +93,8 @@ function SectionSeries(element){
     let Series = document.querySelector('.slide-series');
 
     element.forEach(element => {
-//         console.log(element.title || element.name);
-//         console.log(element.poster_path);
+        // console.log(element.title || element.name);
+        // console.log(element.poster_path);
         let season = document.createElement('div');
         season.classList.add('item-slide');
         season.style = 'width: 270px; height: 360px; border-radius: 20px; margin-left: 10px; margin-right: 10px;'
