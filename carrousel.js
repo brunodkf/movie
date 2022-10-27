@@ -155,7 +155,7 @@ function SectionSeries(element){
             //Avaliação
             let rating = document.createElement('p');
             rating.style = 'display: flex;  align-items: baseline;';
-            rating.innerHTML = `<img width="15" height="15" style="margin-right: 3px; padding-top: 3px;" src="./css/image/icons/star.png" alt="Icone Estrela"> ${busca.vote_average}`;
+            rating.innerHTML = `<img width="15" height="15" style="margin-right: 3px; padding-top: 3px;" src="./css/image/icons/star.png" alt="Icone Estrela"> ${busca.vote_average.toFixed(1)}`;
             infos.appendChild(rating);
          
         }
