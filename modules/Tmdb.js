@@ -1,4 +1,4 @@
-const apiKey = '8b0899818653bf122107b9b37eedf65c';
+const apiKey = '71515a021dc8b5338eb9596bb54175f4';
 
 const apiBase = 'https://api.themoviedb.org/3';
 
